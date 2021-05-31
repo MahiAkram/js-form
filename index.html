@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>login or sign up</title>
+</head>
+<body>
+    <section>
+        <img src="images/main mountain.png" alt="main mountain" id="mountain-1">
+        <img src="images/second mountain.png" alt="secon mountain" id="mountain-2">
+        <img src="images/clouds.png" alt="secon mountain" id="clouds">
+        <img src="images/balloon 1.png" alt="secon mountain" id="balloon-1">
+        <img src="images/balloon 2.png" alt="secon mountain" id="balloon-2">
+        <div class="overlay"></div>
+        <div class="form">
+            <form action="">
+                <h1>sign up to be a traveler!</h1>
+                <h2>Explore the world of Ice and Fire!</h2>
+                <span></span>
+                <div class="input spc">
+                    <input type="text" name="" id="fname" placeholder="first name" class="name">
+                    <small id="fnameErr"></small>
+                </div>
+                <div class="input spc">
+                    <input type="text" name="" id="lname" placeholder="last name" class="name-2" >
+                    <small id="lnameErr"></small>
+                </div>
+                
+                <div class="input">
+                    <input type="email" name="" id="email" placeholder="eamil address">
+                    <small id="emailErr"></small>
+                </div>
+                <div class="input">
+                    <input type="password" name="" id="pass" placeholder="password">
+                    <small id="passErr"></small>
+                </div>
+                <div class="input">
+                    <input type="password" name="" id="cpass" placeholder="confirm password">
+                    <small id="cpassErr"></small>
+                </div>
+                <h3>Date of Birth</h3>
+                <div class="input">
+                    <select name="" id="month" class="sel">
+                        <option value="jan">Jan</option>
+                        <option value="feb">Feb</option>
+                        <option value="mar">Mar</option>
+                        <option value="apr">Apr</option>
+                        <option value="may">May</option>
+                        <option value="june">June</option>
+                        <option value="july">Jul</option>
+                        <option value="aug">Aug</option>
+                        <option value="sep">Sep</option>
+                        <option value="oct">Oct</option>
+                        <option value="nov">Nov</option>
+                        <option value="dec">Dec</option>
+                    </select>
+                    <small id="monthErr"></small>
+                </div>
+                <div class="input">
+                    <select name="" id="date" class="sel">
+                        <option value="1">1</option>
+                        <script>
+                            for(date = 2; date <= 31; date++){
+                                document.write('<option>' + date + '</option>');
+                            }
+                        </script>
+                    </select>
+                    <small id="dateErr"></small>
+                </div>
+                <div class="input">
+                    <select name="" id="year" class="sel">
+                        <option value="2021">2021</option>
+                        <script>
+                            for(year = 2020; year >= 1921; year--){
+                                document.write('<option>' + year + '</option>');
+                            }
+                        </script>
+                    </select>
+                    <small id="yearErr"></small>
+                </div>
+                <h3>Select your Gender</h3>
+                <div class="input">
+                    <select name="" class="gender" id="gender">
+                        <option value="male">male</option>
+                        <option value="male">female</option>
+                        <option value="male">others</option>
+                    </select>
+                    <small id="genderErr"></small>
+                </div>
+                <button onclick="return subm();">sign up</button>
+            </form>
+        </div>
+    </section>
+    
+
+
+
+
+
+
+<script src="js/anime.min.js"></script>
+<script>
+    var animation = anime.timeline({});
+    
+    animation
+    .add({
+        targets: '#mountain-1',
+        top: '54%',
+        duration: '1000',
+        easing: 'easeInOutSine'
+    })
+    .add({
+        targets: '#mountain-2',
+        top: '47%',
+        duration: '1000',
+        easing: 'easeInOutSine'
+    })
+    .add({
+        targets: '#clouds',
+        left: '7%',
+        duration: '500',
+        easing: 'easeInOutSine'
+    })
+    .add({
+        targets: '#balloon-1',
+        left: '79%',
+        duration: '500',
+        easing: 'easeInOutSine'
+    })
+    .add({
+        targets: '#balloon-2',
+        left: '17%',
+        duration: '500',
+        easing: 'easeInOutSine'
+    })
+    .add({
+        targets: '.overlay',
+        opacity: '1',
+        duration: '500',
+        easing: 'easeInOutSine'
+    })
+    .add({
+        targets: '.form',
+        opacity: '1',
+        duration: '1000',
+        easing: 'easeInOutSine'
+    })
+</script>
+
+<script src="js/custom.js"></script>
+<!-- <script>
+    var fname = document.getElementById('fname');
+    var fnameErr = document.getElementById('fnameErr');
+
+    function subm(){
+        if(fname.value == ''){
+            fname.style.border = '1px solid red';
+            return false;
+        }
+    }
+</script> -->
+</body>
+</html>
